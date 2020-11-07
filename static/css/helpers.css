@@ -1,0 +1,23 @@
+.cf { clear: both; }
+/* .cf:after { clear: both;} */
+.d-block{ display: block; }
+.d-none{ display: none; }
+
+.pull-left{ float: left }
+.pull-right{ float: right }
+
+.text-left{ text-align: left  }
+.text-center{ text-align: center  }
+.text-right{ text-align: right }
+
+.m-5{ margin: 5px; }
+.mt-5{ margin-top: 5px; }
+.mr-5{ margin-right: 5px; }
+.mb-5{ margin-bottom: 5px; }
+.ml-5{ margin-left: 5px; }
+
+.m-10{ margin: 10px; }
+.mt-10{ margin-top: 10px; }
+.mr-10{ margin-right: 10px; }
+.mb-10{ margin-bottom: 10px; }
+.ml-10{ margin-left: 10px; }

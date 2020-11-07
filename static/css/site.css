@@ -1,0 +1,61 @@
+
+/* ----------------------------------------- */
+/* DESTACA OS ELEMENTOS EDITAVEIS    */
+/* ----------------------------------------- */
+
+.show-td td {
+	padding: 10px;
+	outline: 1px solid #2c50ee;
+}
+
+.show-p p{
+    padding: 10px;
+    border: 1px solid #2c50ee;
+}
+
+.show-img img{
+    outline: 1px dashed #2c50ee;
+}
+
+/* ------------------------------------------------------------- */
+/* DESTACA OS ELEMENTOS EDITAVEIS QUANDO O MOUSE ESTÁ EM CIMA    */
+/* ------------------------------------------------------------- */
+.show-p   p.is-active, 
+.show-td  td.is-active, 
+.show-img img.is-active{
+	outline: 2px dashed #fd2928 !important;
+}
+
+/* ---------------------------------------- */
+/* DESTACA O ELEMENTO EDITAVEL SELECIONADO  */
+/* ---------------------------------------- */
+.show-p   p.is-selected, 
+.show-td  td.is-selected, 
+.show-img img.is-selected{
+	outline: 2px dashed #fd28e5 !important;
+}
+
+
+/* ----------------------------------------- */
+
+/* DESTACA OS BOTÕES DE SELEÇÃO */
+.show-td .show-td-btn,
+.show-p .show-p-btn,
+.show-img .show-img-btn{
+	opacity: .8
+}
+
+
+
+/* EXIBIÇÃO DOS PAINEIS */
+.is-panel-td,
+.is-panel-p,
+.is-panel-img{
+	display: none
+}
+
+.show-td   .is-selected-td  .is-panel-td,
+.show-p    .is-selected-p 	.is-panel-p,
+.show-img  .is-selected-img .is-panel-img{
+	display: block;
+}

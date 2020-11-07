@@ -1,0 +1,7 @@
+.editor{
+	width: 400px;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	overflow: auto;
+}

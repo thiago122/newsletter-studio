@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Newsletter Studio</title>
+	<link rel="stylesheet" href="static/css/style.css">
+</head>
+<body >
+	
+	<div class="nm-table-conainer">
+
+	    <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#f1f1f1">
+	  
+	        <tr>
+	            <td width="600" height="200" align="center" valign="top" bgcolor="#000000"> </td>
+	        </tr>	  
+	        <tr>
+	            <td width="600"> <p> Parágrafo	</p></td>
+	        </tr>	  
+	        <tr>
+	            <td width="600"> </td>
+	        </tr>
+
+	    </table>
+
+	</div>
+
+
+<div class="editor">
+	<div class="panel">
+
+		<div class="panel__header">
+			Newsletter Studio Code
+		</div>
+
+		<div class="panel__body text-center">
+			<div class="btn-group">
+				<span class="btn" onclick="reset()" title="[ALT + r]">
+					Reset
+				</span>					
+				<span class="btn show-td-btn" onclick="selectTd()" title="[ALT + c]">
+					Célula
+				</span>
+				<span class="btn show-p-btn" onclick="selectP()" title="[ALT + p]">
+					PARÁGAFO
+				</span>
+				<span class="btn show-img-btn" onclick="selectImg()" title="[ALT + i]">
+					IMG
+				</span>
+			</div>
+		</div>
+
+
+
+
+		<div class="panel__body has-top-border is-panel-td">
+
+			<div class="panel__title ">Novo</div>
+
+			<div class="mb-10">
+				<button class="btn is-small is-outline mr-5" data-toggle="modal" data-target="#modal-table">Nova tabela</button>
+				<button class="btn is-small is-outline mr-5" data-toggle="modal" data-target="#modal-table">Nova parágrafo</button>
+				<button class="btn is-small is-outline mr-5" data-toggle="modal" data-target="#modal-table">Nova imagem</button>
+			</div>
+
+			
+
+			<div class="panel__title ">Editar Célula</div>
+
+			<div class="d-block cf mb-10 ">
+				
+				<ul class="dropdown dd-ordenacao">
+					<li>
+						<button class="btn is-small is-outline mr-5">Adicionar</button>
+						<ul>
+							<li><a href="#" onclick="createTdBefore()" >Célula antes</a></li>
+							<li><a href="#" onclick="createTdAfter()" >Célula depois</a></li>
+							<li><a href="#" onclick="createTrBefore()">Linha antes</a></li>
+							<li><a href="#" onclick="createTrAfter()">Linha Depois</a></li>
+						</ul>
+					</li>
+					<li>
+						<button class="btn is-small is-outline">Duplicar</button>
+						<ul>
+							<li><a href="#" onclick="duplicateTdBefore()">Célula antes</a></li>
+							<li><a href="#" onclick="duplicateTdAfter()">Célula depois</a></li>
+							<li><a href="#" onclick="duplicateTrBefore()">Linha antes</a></li>
+							<li><a href="#" onclick="duplicateTrAfter()">Linha Depois</a></li>
+						</ul>
+					</li>
+				</ul>
+
+				<button class="btn is-small ml-5" onclick="moveTrToPrev()" title="Mover linha para cime">&#9650;</button>
+				<button class="btn is-small mr-10" onclick="moveTrToNext()" title="Mover linha para baixo">&#9660;</button>
+
+				<button class="btn is-small ml-10" onclick="moveTdToPrev()" title="Mover célula para esquerda">&#5130;</button>
+				<button class="btn is-small " onclick="moveTdToNext()" title="Mover célula para direita">&#5125;</button>
+
+				<ul class="dropdown dd-ordenacao is-right pull-right">
+					<li>
+						<button class="btn is-small is-danger">Remover</button>
+						<ul>
+							<li><a href="#" onclick="deleteTd()" >Célula </a></li>
+							<li><a href="#" onclick="deleteTr()">Linha</a></li>
+							<li><a href="#" onclick="deleteTable()">Tabela</a></li>
+						</ul>
+					</li>
+				</ul>
+
+
+				<br class="cf">
+			</div>
+
+			<form action="#" id="form-edit-td">
+
+				<div class="form-group has-attributtes">
+					<label>Width</label>
+					<input class="form-control" type="text" name="width">
+				</div>
+
+				<div class="form-group has-attributtes">
+					<label>Height</label>
+					<input class="form-control" type="text" name="height">
+				</div>				
+
+				<div class="form-group has-attributtes">
+					<label>Align</label>
+					<input class="form-control" type="text" name="align">
+				</div>
+
+				<div class="form-group has-attributtes">
+					<label>Valign</label>
+					<input class="form-control" type="text" name="valign">
+				</div>
+
+				<div class="form-group has-attributtes">
+					<label>bgcolor</label>
+					<input class="form-control" type="text" name="bgcolor">
+				</div>
+
+				<div class="text-right mb-10">
+					<input class="btn" type="submit">
+				</div>
+
+			</form>
+
+			<div class="panel__title ">Editar Tabela Parente</div>
+
+			<div class="mb-10">
+				<button class="btn is-small ml-5" onclick="moveTableToPrev()" title="Mover linha para cime">&#9650;</button>
+				<button class="btn is-small mr-10" onclick="moveTableToNext()" title="Mover linha para baixo">&#9660;</button>
+			</div>
+
+			<form action="#" id="form-edit-table">
+
+				<div class="form-group has-attributtes">
+					<label>Width</label>
+					<input class="form-control" type="text" name="width">
+				</div>
+
+				<div class="form-group has-attributtes">
+					<label>Height</label>
+					<input class="form-control" type="text" name="height">
+				</div>				
+
+
+				<div class="form-group has-attributtes">
+					<label>bgcolor</label>
+					<input class="form-control" type="text" name="bgcolor">
+				</div>
+
+				<div class="text-right">
+					<input class="btn" type="submit">
+				</div>
+
+			</form>
+
+		</div>
+
+	</div>	
+</div><!-- /edito -->
+
+	<script src="static/js/libs/jquery-3.5.1.min.js"></script>
+    <script src="static/js/libs/jquery.outerhtml.js"></script>
+    <script src="static/js/libs/jquery.attrUpdate.js"></script>
+    <script src="static/js/libs/modal.js"></script>
+    <script src="static/js/selector.js"></script>
+    <script src="static/js/hotkeys.js"></script>
+    <script src="static/js/edit.js"></script>
+    <script src="static/js/duplicate.js"></script>
+    <script src="static/js/create.js"></script>
+    <script src="static/js/move.js"></script>
+    <script src="static/js/delete.js"></script>
+
+
+</body>
+</html>
