@@ -1,7 +1,7 @@
 
 function deleteTd(){
 
-	var el = $('.is-selected').remove();
+	var el = $('.is-selected');
 
 	if( el.siblings().length == 0 ){
 		alert('Última célula: remova a linha ou a tabela');

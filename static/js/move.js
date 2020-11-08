@@ -42,14 +42,13 @@ function moveTr(positionToMove){
 }
 
 /* ------------------------------------------------------------ */
-function movetableToNext(){
-	movetable('next');
+function moveTableToNext(){
+	moveTable('next');
 }
 
-function movetableToPrev(){
-	movetable('prev');
+function moveTableToPrev(){
+	moveTable('prev');
 }
-
 
 function moveTable(positionToMove){
 	

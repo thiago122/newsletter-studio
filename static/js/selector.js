@@ -47,7 +47,8 @@ function unSelect(){
 	$('*').removeClass('is-selected');
 }
 
-function selectElementToEdit(){
+function selectElementToEdit(e){
+	e.stopPropagation()
 	$('*').removeClass('is-selected');
 	$(this).addClass('is-selected');
 	showPanel();

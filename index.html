@@ -51,20 +51,7 @@
 			</div>
 		</div>
 
-
-
-
 		<div class="panel__body has-top-border is-panel-td">
-
-			<div class="panel__title ">Novo</div>
-
-			<div class="mb-10">
-				<button class="btn is-small is-outline mr-5" data-toggle="modal" data-target="#modal-table">Nova tabela</button>
-				<button class="btn is-small is-outline mr-5" data-toggle="modal" data-target="#modal-table">Nova parágrafo</button>
-				<button class="btn is-small is-outline mr-5" data-toggle="modal" data-target="#modal-table">Nova imagem</button>
-			</div>
-
-			
 
 			<div class="panel__title ">Editar Célula</div>
 
@@ -72,8 +59,12 @@
 				
 				<ul class="dropdown dd-ordenacao">
 					<li>
-						<button class="btn is-small is-outline mr-5">Adicionar</button>
+						<button class="btn is-small is-outline mr-5">Novo</button>
 						<ul>
+							<li><a href="#" data-toggle="modal" data-target="#modal-table">Tabela</a></li>
+							<li><a href="#" data-toggle="modal" data-target="#modal-p">Parágrafo</a></li>
+							<li><a href="#" data-toggle="modal" data-target="#modal-img">Imagem</a></li>
+
 							<li><a href="#" onclick="createTdBefore()" >Célula antes</a></li>
 							<li><a href="#" onclick="createTdAfter()" >Célula depois</a></li>
 							<li><a href="#" onclick="createTrBefore()">Linha antes</a></li>
@@ -81,7 +72,7 @@
 						</ul>
 					</li>
 					<li>
-						<button class="btn is-small is-outline">Duplicar</button>
+						<button class="btn is-small is-outline">Copiar</button>
 						<ul>
 							<li><a href="#" onclick="duplicateTdBefore()">Célula antes</a></li>
 							<li><a href="#" onclick="duplicateTdAfter()">Célula depois</a></li>
@@ -179,7 +170,138 @@
 		</div>
 
 	</div>	
-</div><!-- /edito -->
+</div><!-- /editoe -->
+
+
+	<div class="modal fade" id="modal-table" tabindex="-1" role="dialog" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	        	<div class="panel">
+	        		<div class="panel__header">
+	        			Nova Tabela
+	        		</div>
+					<div class="panel__body ">
+
+				        
+						<form action="#" id="form-add-table" class="mb-10">
+
+							<div class="form-group has-attributtes">
+								<label>Width</label>
+								<input class="form-control" type="text" name="width">
+							</div>			
+
+							<div class="form-group has-attributtes">
+								<label>Linhas</label>
+								<input class="form-control" type="text" name="trs">
+							</div>
+
+							<div class="form-group has-attributtes">
+								<label>Colunas</label>
+								<input class="form-control" type="text" name="tds">
+							</div>
+
+							<div class="form-group has-attributtes">
+								<label>bgcolor</label>
+								<input class="form-control" type="text" name="bgcolor">
+							</div>
+
+			            	<button type="submit" class="btn " >Adicionar</button>
+
+				        </form>
+
+	        		</div>
+	        	</div>
+	                
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="modal-p" tabindex="-1" role="dialog" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	        	<div class="panel">
+	        		<div class="panel__header">
+	        			Novo Parágrafo
+	        		</div>
+					<div class="panel__body ">
+
+						<form action="#" id="form-add-p" class="mb-10">
+
+							<div class="form-group has-attributtes">
+								<label>Style</label>
+								<input class="form-control" type="text" name="style" value="display: block; border: 0;">
+							</div>
+
+							<div class="form-group ">
+								<label>Conteúdo</label>
+								<textarea class="form-control" name="content"></textarea>
+							</div>
+
+			            	<button type="submit" class="btn">Adicionar</button>
+
+				        </form>
+
+	        		</div>
+	        	</div>
+	                
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="modal-img" tabindex="-1" role="dialog" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	        	<div class="panel">
+	        		<div class="panel__header">
+	        			Nova Imagem
+	        		</div>
+					<div class="panel__body ">
+
+						<form action="#" id="form-add-img" class="mb-10">
+
+							<div class="form-group has-attributtes">
+								<label>Width</label>
+								<input class="form-control" type="text" name="width">
+							</div>
+
+							<div class="form-group has-attributtes">
+								<label>Height</label>
+								<input class="form-control" type="text" name="height">
+							</div>			
+
+							<div class="form-group has-attributtes">
+								<label>Src</label>
+								<input class="form-control" type="text" name="src" value="https://globoplay.mobi/news/2020/out/gp-d/v2/news-globoplay-disney-inapp/img1.png">
+							</div>			
+
+							<div class="form-group has-attributtes">
+								<label>Alt</label>
+								<input class="form-control" type="text" name="alt">
+							</div>
+
+							<div class="form-group has-attributtes">
+								<label>Style</label>
+								<input class="form-control" type="text" name="style" value="display: block; border: 0;">
+							</div>
+
+							<div class="form-group has-attributtes">
+								<label>Link</label>
+								<input class="form-control" type="text" name="link" >
+							</div>
+
+			            	<button type="submit" class="btn">Adicionar</button>
+
+				        </form>
+		
+
+	        		</div>
+	        	</div>
+	                
+	        </div>
+	    </div>
+	</div>
+
+
 
 	<script src="static/js/libs/jquery-3.5.1.min.js"></script>
     <script src="static/js/libs/jquery.outerhtml.js"></script>
