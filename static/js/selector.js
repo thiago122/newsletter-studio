@@ -19,13 +19,17 @@ function showPanel(){
 
 	var tag = $('.is-selected').prop('tagName');
 
-	$('.editor').addClass('is-selected-td');
+	// $('.editor').addClass('is-selected-td');
 
 	var selector = 'is-selected-'+tag.toLowerCase(); 
 
 	$('body').removeClass('is-selected-td');
 	$('body').removeClass('is-selected-p');
 	$('body').removeClass('is-selected-img');
+
+
+
+
 	$('body').addClass(selector);
 
 }

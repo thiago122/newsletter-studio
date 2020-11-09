@@ -1,5 +1,7 @@
 $('#form-edit-td').submit( updateTd )
 $('#form-edit-table').submit( updateTable )
+$('#form-edit-p').submit( updateP )
+$('#form-edit-img').submit( updateImg )
 
 
 function edit(){
@@ -23,13 +25,98 @@ function edit(){
 
 // ------------------------------------------------------------------------
 
-function editP(){}
-function saveP(){}
+function editP(){
+
+	var el = $('p.is-selected');
+	var style = el.attr('style');
+	var content = el.html();
+
+	$('#form-edit-p').find('[name=style]').val(style)
+	$('#form-edit-p').find('[name=content]').val(content)
+	
+}
+
+function updateP(e){
+
+	e.preventDefault();
+
+	var style = $('#form-edit-p').find('[name=style]').val();
+	var content = $('#form-edit-p').find('[name=content]').val();
+
+	$('p.is-selected').attr('style', style);
+	$('p.is-selected').html(content);
+}
 
 // ------------------------------------------------------------------------
 
-function editImg(){}
-function saveImg(){}
+function editImg(){
+
+	var el = $('img.is-selected');
+
+	var width 	= el.attr('width');
+	var height 	= el.attr('height');
+	var src 	= el.attr('src');
+	var alt 	= el.attr('alt');
+	var style 	= el.attr('style');
+	
+	// var link 	= el.attr('link');
+
+	var form = $('#form-edit-img');
+
+	form.find('[name=width]').val(width);
+	form.find('[name=height]').val(height);
+	form.find('[name=src]').val(src);
+	form.find('[name=alt]').val(alt);
+	form.find('[name=style]').val(style);
+	
+
+	var parent = el.parent();
+
+	if( parent.prop('tagName') == "A" ){
+		var link = parent.prop('href');
+		form.find('[name=link]').val(link);
+	}
+
+	/// 
+
+}
+
+function updateImg(e){
+
+	e.preventDefault();
+
+	var form 	= $('#form-edit-img');
+	var width 	= form.find('[name=width]').val()
+	var height 	= form.find('[name=height]').val()
+	var src 	= form.find('[name=src]').val()
+	var alt 	= form.find('[name=alt]').val()
+	var style 	= form.find('[name=style]').val()
+	var link 	= form.find('[name=link]').val()
+	
+	var el = $('img.is-selected');
+	
+	el.attrUpdate('width', width);
+	el.attrUpdate('height', height);
+	el.attrUpdate('src', src);
+	el.attrUpdate('alt', alt);
+	el.attrUpdate('style', style);
+
+	var parent = el.parent();
+
+	// se existe link
+	if( parent.prop('tagName') == "A" ){
+		if(link){
+			parent.attr('href', link)
+		}else{
+			el.unwrap(); // retira o link da imagem
+		}
+	}else{
+		if(link){
+			el.wrap( '<a href="'+ link +'" target="_blank"></a>' );
+		}
+	}
+
+}
 
 // ------------------------------------------------------------------------
 

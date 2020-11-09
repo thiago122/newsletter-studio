@@ -54,8 +54,8 @@
 	display: none
 }
 
-.show-td   .is-selected-td  .is-panel-td,
-.show-p    .is-selected-p 	.is-panel-p,
-.show-img  .is-selected-img .is-panel-img{
+.show-td.is-selected-td 	.is-panel-td,
+.show-p.is-selected-p 		.is-panel-p,
+.show-img.is-selected-img 	.is-panel-img{
 	display: block;
 }
