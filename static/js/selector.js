@@ -27,9 +27,6 @@ function showPanel(){
 	$('body').removeClass('is-selected-p');
 	$('body').removeClass('is-selected-img');
 
-
-
-
 	$('body').addClass(selector);
 
 }
@@ -62,7 +59,7 @@ function selectElementToEdit(e){
 
 $(document).on('mouseenter', '.show-td td, .show-p p, .show-img img', function( event ) {
 	$(this).addClass("is-active");
-}).on('mouseleave', 'td', function( event ) {
+}).on('mouseleave', 'td, p, img', function( event ) {
 	$(this).removeClass("is-active");
 });
 

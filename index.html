@@ -6,32 +6,34 @@
 	<title>Newsletter Studio</title>
 	<link rel="stylesheet" href="static/css/style.css">
 </head>
-<body >
+<body>
 
 
-	    <table width="600" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#f1f1f1">
-	  
-	        <tr>
-	            <td width="600" height="200" align="center" valign="top" bgcolor="#000000"> </td>
-	        </tr>	  
-	        <tr>
-	            <td width="600"> <p> Parágrafo	</p></td>
-	        </tr>	  
-	        <tr>
-	            <td width="600">
-	            	<a href="http://globo.com" target="_blank">
-	            	<img 
-	            		src="https://globoplay.mobi/news/2020/out/gp-d/v2/news-globoplay-disney-inapp/img1.png" 
-	            		alt="THIAGO"
-	            		width="600"
-	            		height="300"
-	            		style="display:block" 
-	            	>
-	            	</a>
-	            </td>
-	        </tr>
+	<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#f1f1f1">
 
-	    </table>
+	    <tr>
+	        <td width="600" height="200" align="center" valign="top" bgcolor="#000000"> </td>
+	    </tr>	  
+	    <tr>
+	        <td width="600"> 
+	        	<p> Parágrafo </p>
+	        </td>
+	    </tr>	  
+	    <tr>
+	        <td width="600">
+	        	<a href="http://globo.com" target="_blank">
+	        	<img 
+	        		src="https://globoplay.mobi/news/2020/out/gp-d/v2/news-globoplay-disney-inapp/img1.png" 
+	        		alt="THIAGO"
+	        		width="600"
+	        		height="300"
+	        		style="display:block" 
+	        	>
+	        	</a>
+	        </td>
+	    </tr>
+
+	</table>
 
 
 
@@ -43,7 +45,8 @@
 				<li>
 					<button class="btn is-small is-outline mr-5">Arquivo</button>
 					<ul>
-						<li><a href="#" onclick="exportFile()" >Exportar</a></li>
+						<li><a href="#" onclick="exportFile()" >Exportar</a></li>				
+						<li><a href="#" data-toggle="modal" data-target="#modal-import">Importar</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -378,6 +381,36 @@
 	</div>
 
 
+	<div class="modal fade" id="modal-import" tabindex="-1" role="dialog" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	        	<div class="panel">
+	        		<div class="panel__header">
+	        			Importar
+	        		</div>
+					<div class="panel__body ">
+
+						<form action="#" id="form-import-news" class="mb-10">
+
+							<div class="form-group has-attributtes">
+								<label>Escolha o arquivo</label>
+								<input class="form-control" type="file" name="arquivo">
+							</div>
+
+							
+
+			            	<button type="submit" class="btn">importar</button>
+
+				        </form>
+		
+
+	        		</div>
+	        	</div>
+	                
+	        </div>
+	    </div>
+	</div>
+
 
 	<script src="static/js/libs/jquery-3.5.1.min.js"></script>
     <script src="static/js/libs/jquery.outerhtml.js"></script>
@@ -391,6 +424,7 @@
     <script src="static/js/move.js"></script>
     <script src="static/js/delete.js"></script>
     <script src="static/js/export.js"></script>
+    <script src="static/js/import.js"></script>
 
 
 </body>
