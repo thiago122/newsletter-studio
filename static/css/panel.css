@@ -1,18 +1,25 @@
 
 .panel *{ box-sizing: border-box; }
 .panel{
+
+    width: 360px;
+    position: absolute;
+    z-index: 9;
+
 	font-family: -apple-system,system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #565e6b;
 	background: #f4f5f9;
 	box-shadow: 10px 14px 60px 10px hsl(0deg 0% 50% / 43%);
 	border-radius: 5px;
+    border: 1px solid #e2e2e2;
 }	
 
 .panel__header{
 	padding: 5px 10px;
-	color: #fff;
+	
 	font-weight: bold;
-	background-color: #2c50ee;
+    border-bottom: 1px solid gainsboro;
+	/*background-color: #2c50ee;*/
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }

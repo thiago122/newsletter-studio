@@ -1,16 +1,34 @@
+$('#form-export-news').on('submit', exportFile);
 
-function exportFile(){
-	
+function exportFile(e){
+
 	// https://gist.github.com/liabru/11263260
+	
+	e.preventdefault();
 
-	var text = $('body > table').outerHTML();
+	var form = $('#form-export-news');
 
-	var blob = new Blob([text], { type: 'text/plain' });
-	var anchor = document.createElement('a');
+	// carrega o modelo
+	var request = $.ajax({
+		url: form.find('[name=model-export]').val()
+	});
 
-	anchor.download = "news.html";
-	anchor.href = (window.webkitURL || window.URL).createObjectURL(blob);
-	anchor.dataset.downloadurl = ['text/plain', anchor.download, anchor.href].join(':');
-	anchor.click();
+	request.done(function(html){
+
+		// pega a tabela editada no app
+		var htmlNewsEdited = $('body > table').outerHTML();
+
+		// coloca o html editado no body modelo
+		var text = html.replace("BASE_HTML_EXPORT", htmlNewsEdited);
+
+		var blob = new Blob([text], { type: 'text/plain' });
+		var anchor = document.createElement('a');
+
+		anchor.download = "news.html";
+		anchor.href = (window.webkitURL || window.URL).createObjectURL(blob);
+		anchor.dataset.downloadurl = ['text/plain', anchor.download, anchor.href].join(':');
+		anchor.click();
+
+	});
 
 }
