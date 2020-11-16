@@ -93,17 +93,17 @@ function createTable(e){
 	var widthTd = Math.round( width/tds );
 
 	var attr = '';
-	console.log( 'passei' );
+
 	if(width){
 		attr +=  ' width="' + width + '" '
 	}
-	console.log( 'passei' );
+
 	if(bgcolor){
 		attr +=  ' bgcolor="' + bgcolor + '" '
 	}
-	console.log( 'passei' );
+
 	var htmlTable = '<table border="0" cellspacing="0" cellpadding="0" align="center"  '+ attr +'>';
-	console.log( 'passei' );
+
 	for (var i = trs - 1; i >= 0; i--) {
 		htmlTable += '<tr>';
 
@@ -117,8 +117,6 @@ function createTable(e){
 	}
 
 	htmlTable += '</table>';
-
-	console.log( 'passei' );
 
 	$('.is-selected').append(htmlTable);
 
