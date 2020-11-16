@@ -8,13 +8,11 @@
 </head>
 <body>
 
-
 	<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#f1f1f1">
 	    <tr>
 	        <td width="600" align="center" valign="top"> </td>
 	    </tr>	  
 	</table>
-
 
 	<div class="panel">
 
@@ -24,7 +22,8 @@
 					<button class="btn is-small is-outline mr-5">Arquivo</button>
 					<ul>
 						<li><a href="#" data-toggle="modal" data-target="#modal-export">Exportar</a></li>				
-						<li><a href="#" data-toggle="modal" data-target="#modal-import">Importar</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#modal-import-remote">Importar - Remoto</a></li>
+						<li><a href="#" data-toggle="modal" data-target="#modal-import-local">Importar - Local</a></li>
 					</ul>
 				</li>
 			</ul>
@@ -358,36 +357,6 @@
 	    </div>
 	</div>
 
-
-	<div class="modal fade" id="modal-import" tabindex="-1" role="dialog" aria-hidden="true">
-	    <div class="modal-dialog" role="document">
-	        <div class="modal-content">
-	        	<div class="panel">
-	        		<div class="panel__header">
-	        			Importar
-	        		</div>
-					<div class="panel__body ">
-
-						<form action="#" id="form-import-news" class="mb-10">
-
-							<div class="form-group has-attributtes">
-								<label>Escolha o arquivo</label>
-								<input class="form-control" type="file" name="arquivo">
-							</div>
-
-			            	<button type="submit" class="btn">importar</button>
-
-				        </form>
-		
-
-	        		</div>
-	        	</div>
-	                
-	        </div>
-	    </div>
-	</div>
-
-
 	<div class="modal fade" id="modal-export" tabindex="-1" role="dialog" aria-hidden="true">
 	    <div class="modal-dialog" role="document">
 	        <div class="modal-content">
@@ -401,9 +370,13 @@
 							<div class="form-group has">
 								<label>Escolha o modelo</label>
 								<select class="form-control" name="model-export">
-									<option value="models/base-export-gp.html">Base GP</option>
+									<option >Selecione</option>
+									<option value="models/base-blank.html">Base</option>								
+									<option value="models/base-export-gp.html">Base GP</option>								
 								</select>
 							</div>
+
+							<textarea name="head-export" class="d-block"></textarea>
 			            	<button type="submit" class="btn">Exportar</button>
 				        </form>
 
@@ -413,6 +386,39 @@
 	        </div>
 	    </div>
 	</div>
+
+
+
+	<div class="modal fade" id="modal-import-local" tabindex="-1" role="dialog" aria-hidden="true">
+	    <div class="modal-dialog" role="document">
+	        <div class="modal-content">
+	        	<div class="panel">
+	        		<div class="panel__header">
+	        			Importar
+	        		</div>
+					<div class="panel__body ">
+
+						<form action="#" id="form-import-news" class="mb-10">
+
+							<div class="form-group">
+								<label>Escolha o arquivo</label>
+								<input class="form-control" type="file" name="arquivo">
+							</div>
+
+							<textarea name="head-import" class="d-block"></textarea>
+							<textarea name="body-import" class="d-block"></textarea>
+
+			            	<button type="submit" class="btn">importar</button>
+
+				        </form>
+
+	        		</div>
+	        	</div>
+	                
+	        </div>
+	    </div>
+	</div>
+
 
 
 

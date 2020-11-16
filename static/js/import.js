@@ -1,22 +1,54 @@
 
 $('#form-import-news').submit(importar)
-$(document).on('change','[name=arquivo]', importar)
 
+$(document).on('change','[name=arquivo]', selectFile)
 
-function importar(){
+function selectFile(){
        
-    var fr=new FileReader(); 
+    var fr = new FileReader(); 
+
+    fr.readAsText(this.files[0], 'ISO-8859-1'); 
+
     fr.onload = function(){ 
 
+		var html = $('<content>').append($.parseHTML( fr.result ));
+		// console.log( fr.result )
 
-var html = $('<div>').append($.parseHTML( fr.result ));
-
+		// reseta a news atual em edição
         $('body').find('table').eq(0).remove();
         
+        // pega a tabela do arquivo
         var table = html.find('table').eq(0);
-        $('body').append(table);
-    } 
-      
-    fr.readAsText(this.files[0]); 
+
+        var headHtml = '';
+
+        headHtml += html.find('title').eq(0).outerHTML();
+        headHtml += html.find('link').outerHTML();
+
+		html.find('meta').each(function( index ) {
+			headHtml += html.find('meta').eq(index).outerHTML()
+		});
+        
+
+		$('[name=head-import]').val(headHtml);
+        $('[name=body-import]').val(table.outerHTML());
+
+
+    }
+
+}
+
+
+function importar(e){
+
+	e.preventDefault()
+
+    var head = $('[name=head-import]').val();
+    var table = $('[name=body-import]').val();
+
+    $('[name=head-export]').val(head);
+
+
+    $('body').append(table);
 
 }
