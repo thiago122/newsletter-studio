@@ -40,8 +40,8 @@ function dragElement(panelSelector, handlerSelector) {
         // set the element's new position:
 
         panel.css({
-            top: (panel.offset().top - pos2), 
-            left: (panel.offset().left - pos1)
+            top: (panel.position().top - pos2), 
+            left: (panel.position().left - pos1)
         })
 
     }
