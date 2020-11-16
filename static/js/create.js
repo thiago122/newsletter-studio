@@ -163,7 +163,9 @@ function createTrAfter(){
 function createTr(positionToInsert){
 
 	var tr = $('.is-selected').closest('tr');
-	var qtTds = tr.find('td').length;
+	var qtTds = tr.find(' > td').length;
+
+	console.log(qtTds)
 
 	html = '<tr>';
 
