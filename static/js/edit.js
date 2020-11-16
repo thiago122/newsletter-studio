@@ -31,7 +31,8 @@ function editP(){
 	var style = el.attr('style');
 	var content = el.html();
 
-	$('#form-edit-p').find('[name=style]').val(style)
+	$('#form-edit-p').find('[name=style]').val(addLineBreakToStyle(style))
+
 	$('#form-edit-p').find('[name=content]').val(content)
 	
 }
@@ -43,7 +44,7 @@ function updateP(e){
 	var style = $('#form-edit-p').find('[name=style]').val();
 	var content = $('#form-edit-p').find('[name=content]').val();
 
-	$('p.is-selected').attr('style', style);
+	$('p.is-selected').attr('style', removeLineBreakToStyle(style));
 	$('p.is-selected').html(content);
 }
 
@@ -67,9 +68,8 @@ function editImg(){
 	form.find('[name=height]').val(height);
 	form.find('[name=src]').val(src);
 	form.find('[name=alt]').val(alt);
-	form.find('[name=style]').val(style);
+	form.find('[name=style]').val(addLineBreakToStyle(style));
 	
-
 	var parent = el.parent();
 
 	if( parent.prop('tagName') == "A" ){
@@ -99,7 +99,7 @@ function updateImg(e){
 	el.attrUpdate('height', height);
 	el.attrUpdate('src', src);
 	el.attrUpdate('alt', alt);
-	el.attrUpdate('style', style);
+	el.attrUpdate('style', removeLineBreakToStyle(style));
 
 	var parent = el.parent();
 
