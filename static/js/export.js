@@ -35,12 +35,15 @@ function exportFile(){
 	request.done(function(html){
 
 		// pega a tabela editada no app
-		var htmlNewsEdited = $('body > table').outerHTML();
 
+		$('body > table *').removeAttr('class');
+		var htmlNewsEdited = $('body > table').outerHTML();
+		
 		// coloca o html editado no body modelo
 		var text = html.replace("HTML_TABLE", htmlNewsEdited);
 			text = text.replace("HTML_HEAD", $('[name=head-export]').val() );
 			text = html_beautify( text );
+			text.replace('class=""', "");
 
 		var blob = new Blob(["\ufeff", text], { type: "text/plain;" });
 
