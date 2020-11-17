@@ -17,7 +17,7 @@ function createP(e){
 	var attr = '';
 
 	if(style){
-		attr +=  ' style="' + style + '" '
+		attr +=  ' style="' + removeLineBreakToStyle(style) + '" '
 	}
 
 	var html = '<p '+ attr +'>'+ content +'</p>';
@@ -25,6 +25,8 @@ function createP(e){
 	$('.is-selected').append(html);
 
 	$('#modal-p').modal('toggle');
+
+	$('#form-add-p')[0].reset();
 
 }
 // ------------------------------------------------------------------------
@@ -60,7 +62,7 @@ function createImg(e){
 	}
 
 	if(style){
-		attr +=  ' style="' + style + '" '
+		attr +=  ' style="' + removeLineBreakToStyle(style) + '" '
 	}
 
 	if( link ){
@@ -74,6 +76,8 @@ function createImg(e){
 	$('.is-selected').append(html);
 
 	$('#modal-img').modal('toggle');
+
+	$('#form-add-img')[0].reset();
 
 }
 
@@ -121,6 +125,8 @@ function createTable(e){
 	$('.is-selected').append(htmlTable);
 
 	$('#modal-table').modal('toggle');
+
+	$('#form-add-table')[0].reset();
 
 }
 

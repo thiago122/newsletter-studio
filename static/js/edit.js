@@ -6,21 +6,30 @@ $('#form-edit-img').submit( updateImg )
 
 function edit(){
 
-	var tag = $('.is-selected').prop('tagName');
+	$('#form-edit-td')[0].reset();
+	$('#form-edit-table')[0].reset();
+	$('#form-edit-p')[0].reset();
+	$('#form-edit-img')[0].reset();
 
-	if( tag == 'TD' ){
-		editTd();
-		editTable();
-	}	
 
-	if( tag == 'P' ){
-		editP();
-	}
 
-	if( tag == 'IMG' ){
-		editImg();
-	}
-	
+		var tag = $('.is-selected').prop('tagName');
+
+		if( tag == 'TD' ){
+			editTd();
+			editTable();
+		}	
+
+		if( tag == 'P' ){
+			editP();
+		}
+
+		if( tag == 'IMG' ){
+			editImg();
+		}
+
+
+
 }
 
 // ------------------------------------------------------------------------
