@@ -14,14 +14,14 @@
 	    </tr>	  
 	</table>
 
-	<div class="panel">
+	<div class="panel is-dragabble">
 
-		<div class="panel__header">
+		<div class="panel__header is-dragabble__handler">
 			<ul class="dropdown dd-ordenacao">
 				<li>
 					<button class="btn is-small is-outline mr-5">Arquivo</button>
 					<ul>
-						<li><a href="#!" data-toggle="modal" data-target="#modal-export">Exportar</a></li>				
+						<li><a href="#!" data-toggle="modal" data-target="#modal-export" onclick="prepareToExportFile()">Exportar</a></li>				
 						<li><a href="#!" data-toggle="modal" data-target="#modal-import-remote">Importar - Remoto</a></li>
 						<li><a href="#!" data-toggle="modal" data-target="#modal-import-local">Importar - Local</a></li>
 					</ul>
@@ -370,14 +370,18 @@
 							<div class="form-group has">
 								<label>Escolha o modelo</label>
 								<select class="form-control" name="model-export">
-									<option >Selecione</option>
-									<option value="models/base-blank.html">Base</option>								
-									<option value="models/base-export-gp.html">Base GP</option>								
+									<option value="models/base-blank.html" >Base</option>
 								</select>
 							</div>
 
-							<textarea name="head-export" class="d-block"></textarea>
-			            	<button type="submit" class="btn">Exportar</button>
+							<div class="form-group">
+								<label> Html da tabela </label>
+								<textarea class="form-control" name="head-export" class="d-block" rows="8"></textarea>
+							</div>
+							
+							<div class="text-right">
+			            		<button type="submit" class="btn">Exportar</button>
+			            	</div>
 				        </form>
 
 	        		</div>
@@ -387,10 +391,8 @@
 	    </div>
 	</div>
 
-
-
 	<div class="modal fade" id="modal-import-local" tabindex="-1" role="dialog" aria-hidden="true">
-	    <div class="modal-dialog" role="document">
+	    <div class="modal-dialog is-big" role="document">
 	        <div class="modal-content">
 	        	<div class="panel">
 	        		<div class="panel__header">
@@ -401,14 +403,23 @@
 						<form action="#" id="form-import-news" class="mb-10">
 
 							<div class="form-group">
-								<label>Escolha o arquivo</label>
+								<label>Escolha o arquivo local</label>
 								<input class="form-control" type="file" name="arquivo">
 							</div>
 
-							<textarea name="head-import" class="d-block"></textarea>
-							<textarea name="body-import" class="d-block"></textarea>
+							<div class="form-group">
+								<label> Html do head </label>
+								<textarea class="form-control" name="head-import" class="d-block" rows="8"></textarea>
+							</div>
+							
+							<div class="form-group">
+								<label> Html da tabela </label>
+								<textarea class="form-control" name="body-import" class="d-block" rows="8"></textarea>
+							</div>
 
-			            	<button type="submit" class="btn">importar</button>
+							<div class="text-right">
+								<button type="submit" class="btn">importar</button>
+							</div>
 
 				        </form>
 

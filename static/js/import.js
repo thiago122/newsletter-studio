@@ -29,10 +29,8 @@ function selectFile(){
 			headHtml += html.find('meta').eq(index).outerHTML()
 		});
         
-
-		$('[name=head-import]').val(headHtml);
-        $('[name=body-import]').val(table.outerHTML());
-
+		$('[name=head-import]').val(html_beautify(headHtml));
+        $('[name=body-import]').val(html_beautify(table.outerHTML()));
 
     }
 
@@ -46,9 +44,13 @@ function importar(e){
     var head = $('[name=head-import]').val();
     var table = $('[name=body-import]').val();
 
-    $('[name=head-export]').val(head);
-
+    $('[name=head-export]').val( html_beautify(head));
 
     $('body').append(table);
+
+    $('#modal-import-local').modal('hide');
+
+    // reseta
+    $('#form-import-news')[0].reset();
 
 }

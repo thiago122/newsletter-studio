@@ -1,11 +1,6 @@
 
 .panel *{ box-sizing: border-box; }
 .panel{
-
-    width: 360px;
-    position: fixed;
-    z-index: 9;
-
 	font-family: -apple-system,system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif;
 	color: #565e6b;
 	background: #f4f5f9;
@@ -46,4 +41,13 @@
     letter-spacing: .5px;
     text-transform: uppercase;
     text-align: center;
+}
+
+.panel.is-dragabble{
+    width: 360px;
+    position: fixed;
+    z-index: 9;    
+}
+.is-dragabble__handler{
+    cursor: move;
 }

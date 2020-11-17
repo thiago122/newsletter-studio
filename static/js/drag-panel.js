@@ -1,5 +1,5 @@
 
-dragElement('.panel', '.panel__header')
+dragElement('.panel.is-dragabble', '.is-dragabble__handler')
 
 function dragElement(panelSelector, handlerSelector) {
     
