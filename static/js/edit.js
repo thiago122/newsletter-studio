@@ -11,24 +11,20 @@ function edit(){
 	$('#form-edit-p')[0].reset();
 	$('#form-edit-img')[0].reset();
 
+	var tag = $('.is-selected').prop('tagName');
 
+	if( tag == 'TD' ){
+		editTd();
+		editTable();
+	}	
 
-		var tag = $('.is-selected').prop('tagName');
+	if( tag == 'P' ){
+		editP();
+	}
 
-		if( tag == 'TD' ){
-			editTd();
-			editTable();
-		}	
-
-		if( tag == 'P' ){
-			editP();
-		}
-
-		if( tag == 'IMG' ){
-			editImg();
-		}
-
-
+	if( tag == 'IMG' ){
+		editImg();
+	}
 
 }
 
