@@ -21,8 +21,9 @@ function exportFile(e){
 		// coloca o html editado no body modelo
 		var text = html.replace("HTML_TABLE", htmlNewsEdited);
 			text = text.replace("HTML_HEAD", $('[name=head-export]').val());
+			text = html_beautify( text );
 
-		var blob = new Blob(["\ufeff", text], {type: "text/plain;" });
+		var blob = new Blob(["\ufeff", text], { type: "text/plain;" });
 
 		var anchor = document.createElement('a');
 
