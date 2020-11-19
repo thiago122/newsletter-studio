@@ -23,7 +23,9 @@ function prepareToExportFile(){
 }
 
 
-function exportFile(){
+function exportFile(e){
+	
+	e.preventDefault();
 
 	var form = $('#form-export-news');
 

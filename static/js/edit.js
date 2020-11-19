@@ -2,6 +2,7 @@ $('#form-edit-td').submit( updateTd )
 $('#form-edit-table').submit( updateTable )
 $('#form-edit-p').submit( updateP )
 $('#form-edit-img').submit( updateImg )
+$(document).on('click','.get-src-dimension', getSrcDimensions )
 
 
 function edit(){
@@ -82,8 +83,28 @@ function editImg(){
 		form.find('[name=link]').val(link);
 	}
 
-	/// 
+}
 
+function getSrcDimensions(e){
+
+	e.preventDefault();
+
+	var el = $(this)
+	var text = el.text()
+	var form = el.closest('form');
+	var src = form.find('[name=src]').val();
+	var width = form.find('[name=width]');
+	var height = form.find('[name=height]');
+
+	$(this).text('Loading...');
+
+	getImageSize(src, function(imageObject){
+
+		width.val(imageObject.width);
+		height.val(imageObject.height);
+		el.text(text);
+
+	})
 }
 
 function updateImg(e){
