@@ -17,7 +17,7 @@
 	<div class="panel is-dragabble">
 
 		<div class="panel__header is-dragabble__handler">
-			<ul class="dropdown dd-ordenacao">
+			<ul class="dropdown dd-ordenacao" style="z-index: 999">
 				<li>
 					<button class="btn is-small is-outline mr-5">Arquivo</button>
 					<ul>
@@ -45,12 +45,13 @@
 		</div>
 
 		<div class="panel__body text-center">
+			<div class="tt-seletor">Selecione para editar e destacar</div>
 			<div class="btn-group">
 				<span class="btn" onclick="reset()" title="[ALT + r]">
 					Reset
 				</span>					
 				<span class="btn show-td-btn" onclick="selectTd()" title="[ALT + c]">
-					Célula
+					Célula(td)
 				</span>
 				<span class="btn show-p-btn" onclick="selectP()" title="[ALT + p]">
 					PARÁGAFO
@@ -213,7 +214,7 @@
 
 			</form>
 
-			<div class="panel__title ">Editar Tabela Parente</div>
+			<div class="panel__title ">Editar Tabela Mãe</div>
 
 			<div class="mb-10">
 				<button class="btn is-small ml-5" onclick="moveTableToPrev()" title="Mover linha para cime">&#9650;</button>
