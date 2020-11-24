@@ -12,11 +12,11 @@ function snippetAtrubutosP( formSelector, snippetName ){
 	}
 
 	if( snippetName == 'gp-regular' ){
-		value = " font-family: 'globotipo_textoregular', -apple-system,system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1; color: #525252; text-align: center; margin: 1px 1px 1px 1px; ";
+		value = " font-family: 'globotipo_textoregular', -apple-system,system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 10px; color: #525252; text-align: center; margin: 1px 1px 1px 1px; ";
 	}
 
 	if( snippetName == 'padrao' ){
-		value = " font-family: -apple-system,system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 1; color: #525252; text-align: center; margin: 1px 1px 1px 1px; ";
+		value = " font-family: -apple-system,system-ui, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px; line-height: 10px; color: #525252; text-align: center; margin: 1px 1px 1px 1px; ";
 	}
 
 	if( snippetName == 'espacamento' ){
