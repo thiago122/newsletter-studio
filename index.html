@@ -137,7 +137,7 @@
 				
 				<ul class="dropdown dd-ordenacao">
 					<li>
-						<button class="btn is-small is-outline mr-5">Novo</button>
+						<button class="btn is-small is-outline mr-5">Adicionar</button>
 						<ul>
 							<li><a href="#!" data-toggle="modal" data-target="#modal-table">Tabela</a></li>
 							<li><a href="#!" data-toggle="modal" data-target="#modal-p">Parágrafo</a></li>
@@ -147,6 +147,7 @@
 							<li><a href="#!" onclick="createTdAfter()" >Célula depois</a></li>
 							<li><a href="#!" onclick="createTrBefore()">Linha antes</a></li>
 							<li><a href="#!" onclick="createTrAfter()">Linha Depois</a></li>
+							<li><a href="#!" data-toggle="modal" data-target="#modal-html">HTML</a></li>
 						</ul>
 					</li>
 					<li>
@@ -176,8 +177,6 @@
 						</ul>
 					</li>
 				</ul>
-
-
 				<br class="cf">
 			</div>
 
@@ -342,6 +341,27 @@ border: 0;
 	        		</div>
 	        	</div>
 	                
+	        </div>
+	    </div>
+	</div>
+
+	<div class="modal fade" id="modal-html" tabindex="-1" role="dialog" aria-hidden="true">
+	    <div class="modal-dialog is-big" role="document">
+	        <div class="modal-content">
+	        	<div class="panel">
+	        		<div class="panel__header">
+	        			Adicionar html 
+	        		</div>
+					<div class="panel__body ">
+						<form action="#" id="form-add-html" class="mb-10">
+							<div class="form-group ">
+								<label>HTML</label>
+								<textarea class="form-control" rows="8" name="code"></textarea>
+							</div>
+			            	<button type="submit" class="btn">Adicionar</button>
+				        </form>
+	        		</div>
+	        	</div>  
 	        </div>
 	    </div>
 	</div>

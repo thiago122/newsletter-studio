@@ -1,8 +1,26 @@
 $('#form-add-table').submit(createTable);
 $('#form-add-img').submit(createImg);
 $('#form-add-p').submit(createP);
+$('#form-add-html').submit(addHTML);
 
+// ------------------------------------------------------------------------
 
+function addHTML(e){
+
+	e.preventDefault();
+
+	var form 	= $('#form-add-html');
+	var code 	= form.find('[name=code]').val()
+
+	var attr = '';
+
+	$('.is-selected').append(code);
+
+	$('#modal-html').modal('toggle');
+
+	$('#form-add-html')[0].reset();
+
+}
 
 // ------------------------------------------------------------------------
 
@@ -29,6 +47,7 @@ function createP(e){
 	$('#form-add-p')[0].reset();
 
 }
+
 // ------------------------------------------------------------------------
 
 function createImg(e){
