@@ -185,12 +185,16 @@ function editTd(){
 	var align 	= el.attr('align');
 	var valign 	= el.attr('valign');
 	var bgcolor = el.attr('bgcolor');
+	var style 	= el.attr('style');
 
 	$('#form-edit-td').find('input[name=width]').val(width)
 	$('#form-edit-td').find('input[name=height]').val(height)
 	$('#form-edit-td').find('input[name=align]').val(align)
 	$('#form-edit-td').find('input[name=valign]').val(valign)
 	$('#form-edit-td').find('input[name=bgcolor]').val(bgcolor)
+	$('#form-edit-td').find('[name=style]').val(addLineBreakToStyle(style))
+
+
 
 }
 
@@ -199,18 +203,21 @@ function updateTd(e){
 	e.preventDefault();
 
 	var el = $('.is-selected');
+	var form = $('#form-edit-td');
 
-	var width 		= $('#form-edit-td').find('input[name=width]').val();
-	var height 		= $('#form-edit-td').find('input[name=height]').val();
-	var align 		= $('#form-edit-td').find('input[name=align]').val();
-	var valign 		= $('#form-edit-td').find('input[name=valign]').val();
-	var bgcolor 	= $('#form-edit-td').find('input[name=bgcolor]').val();
+	var width 		= form.find('input[name=width]').val();
+	var height 		= form.find('input[name=height]').val();
+	var align 		= form.find('input[name=align]').val();
+	var valign 		= form.find('input[name=valign]').val();
+	var bgcolor 	= form.find('input[name=bgcolor]').val();
 
+	var style 		= form.find('[name=style]').val()
 
 	el.attrUpdate('width', width);
 	el.attrUpdate('height', height);
 	el.attrUpdate('align', align);
 	el.attrUpdate('valign', valign);
 	el.attrUpdate('bgcolor', bgcolor);
+	el.attrUpdate('style', removeLineBreakToStyle(style));
 
 }

@@ -1,10 +1,20 @@
 
 function addLineBreakToStyle(style){
+
+	if(!style){
+		return null;
+	}
+
 	style = style.split(';')
 	return style.join(';\r\n');
 }
 
 function removeLineBreakToStyle(style){
+
+	if(!style){
+		return null;
+	}
+
 	return style.replace(/(\r\n|\n|\r)/gm,"");
 }
 
