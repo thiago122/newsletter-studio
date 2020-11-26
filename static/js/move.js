@@ -17,6 +17,7 @@ function moveTd(positionToMove){
 		el.before(el.next());
 	}
 
+	setHistory()
 }
 
 /* ------------------------------------------------------------ */
@@ -39,6 +40,7 @@ function moveTr(positionToMove){
 		el.before(el.next());
 	}
 
+	setHistory()
 }
 
 /* ------------------------------------------------------------ */
@@ -59,5 +61,7 @@ function moveTable(positionToMove){
 	}else{
 		el.before(el.next());
 	}
+
+	setHistory()
 
 }

@@ -20,6 +20,7 @@ function addHTML(e){
 
 	$('#form-add-html')[0].reset();
 
+	setHistory()
 }
 
 // ------------------------------------------------------------------------
@@ -46,6 +47,7 @@ function createP(e){
 
 	$('#form-add-p')[0].reset();
 
+	setHistory()
 }
 
 // ------------------------------------------------------------------------
@@ -98,6 +100,7 @@ function createImg(e){
 
 	$('#form-add-img')[0].reset();
 
+	setHistory()
 }
 
 
@@ -147,6 +150,7 @@ function createTable(e){
 
 	$('#form-add-table')[0].reset();
 
+	setHistory()
 }
 
 
@@ -172,6 +176,7 @@ function createTd(positionToInsert){
 		$('td.is-selected').after(html);
 	}
 
+	setHistory()
 }
 
 // ------------------------------------------------------------------------
@@ -205,4 +210,5 @@ function createTr(positionToInsert){
 		tr.after(html);
 	}
 
+	setHistory()
 }

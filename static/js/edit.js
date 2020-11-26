@@ -52,6 +52,8 @@ function updateP(e){
 
 	$('p.is-selected').attr('style', removeLineBreakToStyle(style));
 	$('p.is-selected').html(content);
+
+	setHistory()
 }
 
 // ------------------------------------------------------------------------
@@ -142,6 +144,7 @@ function updateImg(e){
 		}
 	}
 
+	setHistory()
 }
 
 // ------------------------------------------------------------------------
@@ -173,6 +176,8 @@ function updateTable(e){
 	el.attrUpdate('width', width);
 	el.attrUpdate('height', height);
 	el.attrUpdate('bgcolor', bgcolor);
+
+	setHistory()
 }
 
 // ------------------------------------------------------------------------
@@ -194,7 +199,7 @@ function editTd(){
 	$('#form-edit-td').find('input[name=bgcolor]').val(bgcolor)
 	$('#form-edit-td').find('[name=style]').val(addLineBreakToStyle(style))
 
-
+	setHistory()
 
 }
 
@@ -220,4 +225,5 @@ function updateTd(e){
 	el.attrUpdate('bgcolor', bgcolor);
 	el.attrUpdate('style', removeLineBreakToStyle(style));
 
+	setHistory()
 }

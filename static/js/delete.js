@@ -10,6 +10,7 @@ function deleteTd(){
 
 	el.remove();
 	unSelect()
+	setHistory()
 }
 
 function deleteTr(){
@@ -23,6 +24,7 @@ function deleteTr(){
 
 	el.remove();
 	unSelect()
+	setHistory()
 }
 
 function deleteTable(){
@@ -36,4 +38,5 @@ function deleteTable(){
 
 	el.remove();
 	unSelect()
+	setHistory()
 }
