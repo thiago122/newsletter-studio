@@ -40,3 +40,21 @@ function deleteTable(){
 	unSelect()
 	setHistory()
 }
+
+function deleteP(){
+
+	var el = $('.is-selected');
+
+	el.remove();
+	unSelect()
+	setHistory()
+}
+
+function deleteImg(){
+
+	var el = $('.is-selected');
+
+	el.remove();
+	unSelect()
+	setHistory()
+}
