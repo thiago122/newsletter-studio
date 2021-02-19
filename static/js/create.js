@@ -118,6 +118,14 @@ function createTable(e){
 	var trs 	= form.find('[name=trs]').val()
 	var tds 	= form.find('[name=tds]').val()
 	var bgcolor = form.find('[name=bgcolor]').val()
+
+	if( ! width){
+		console.log('asdaaaaaaaaaaaaaaaaa')
+		width = $('.is-selected').attr('width');
+	}
+
+
+
 	var widthTd = Math.round( width/tds );
 
 	var attr = '';
