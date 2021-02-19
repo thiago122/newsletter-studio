@@ -68,10 +68,12 @@ function createImg(e){
 
 	if(width){
 		attr +=  ' width="' + width + '" '
+		$('.is-selected').attr('width', width)
 	}
 
 	if(height){
 		attr +=  ' height="' + height + '" '
+
 	}
 
 	if(src){

@@ -131,6 +131,9 @@ function updateImg(e){
 
 	var parent = el.parent();
 
+	var td = el.closest('td');
+	td.attr('width', width)
+
 	// se existe link
 	if( parent.prop('tagName') == "A" ){
 		if(link){
