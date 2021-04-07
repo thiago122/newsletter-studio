@@ -54,10 +54,7 @@ function initTextEditor(){
 $('body').on('click', '.create-link', createlink );
 $('body').on('click', '.remove-link', removeLink );
 $('body').on('click', '.btn-editor', execEditor );
-$('body').on('keyup', function(){
-	setTimeout(function(){
-		clearWrongNewLines()
-	}, 500)
-});
-
+$('body').on('focusout','[contenteditable]', clearWrongNewLines);
 initTextEditor()
+
+
