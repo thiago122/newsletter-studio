@@ -10,9 +10,26 @@
 
 	<table width="600" border="0" cellspacing="0" cellpadding="0" align="center" bgcolor="#f1f1f1">
 	    <tr>
-	        <td width="600" align="center" valign="top"> </td>
+	        <td width="600" valign="top"> <p contenteditable="true">ddd dfs df dfsdf sdfsf</p></td>
 	    </tr>	  
 	</table>
+
+	<!-- Editor de texto -->
+	<span class='holder'>
+		<div class='share-highlight-btn'>
+			<div class='btn-caret'>
+			</div>
+			<div class='btn-left'>
+				<div class="btn-editor">
+		        	<i class="icon icon-bold btn-editor" data-editor="strong"></i>
+		        	<i class="icon icon-italic btn-editor" data-editor="italic"></i>
+		        	<i class="icon icon-link create-link"></i>
+		        	<i class="icon icon-unlink remove-link"></i>
+				</div>
+			</div>
+			<i class="icon icon-delete btn-right"></i>
+		</div>
+	</span>
 
 	<div class="panel is-dragabble">
 
@@ -498,6 +515,9 @@ border: 0;
     <script src="static/js/libs/jquery.attrUpdate.js"></script>
     <script src="static/js/libs/beautifyhtml.js"></script>
     <script src="static/js/libs/modal.js"></script>
+    <script src="static/js/libs/jQuery.highlighter.js"></script>
+
+
     <script src="static/js/history.js"></script>
     <script src="static/js/helpers.js"></script>
     <script src="static/js/selector.js"></script>
@@ -511,6 +531,7 @@ border: 0;
     <script src="static/js/import.js"></script>
     <script src="static/js/drag-panel.js"></script>
     <script src="static/js/snippets.js"></script>
+    <script src="static/js/text-editor.js"></script>
 
     <script>
     	window.onbeforeunload = function (e) {

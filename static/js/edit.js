@@ -148,6 +148,7 @@ function updateImg(e){
 	}
 
 	setHistory()
+	initTextEditor()
 }
 
 // ------------------------------------------------------------------------
@@ -181,6 +182,7 @@ function updateTable(e){
 	el.attrUpdate('bgcolor', bgcolor);
 
 	setHistory()
+	initTextEditor()
 }
 
 // ------------------------------------------------------------------------
@@ -203,6 +205,7 @@ function editTd(){
 	$('#form-edit-td').find('[name=style]').val(addLineBreakToStyle(style))
 
 	setHistory()
+	initTextEditor()
 
 }
 
@@ -229,4 +232,5 @@ function updateTd(e){
 	el.attrUpdate('style', removeLineBreakToStyle(style));
 
 	setHistory()
+	initTextEditor()
 }

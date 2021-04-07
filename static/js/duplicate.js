@@ -22,6 +22,7 @@ function duplicateTr(positionToInsert){
 
 	$('*').removeClass('is-selected')
 	$(selected).addClass('is-selected')
+	initTextEditor();
 }
 
 // ------------------------------------------------------------------------
@@ -49,4 +50,5 @@ function duplicateTd(positionToInsert){
 
 	$('*').removeClass('is-selected')
 	$(selected).addClass('is-selected')
+	initTextEditor();
 }

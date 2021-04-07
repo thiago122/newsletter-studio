@@ -53,4 +53,6 @@ function importar(e){
     // reseta
     $('#form-import-news')[0].reset();
 
+    initTextEditor()
+
 }

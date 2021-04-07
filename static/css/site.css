@@ -1,4 +1,8 @@
 
+
+p:focus {
+    outline: #43fdb1 auto 1px;
+}
 /* ----------------------------------------- */
 /* DESTACA OS ELEMENTOS EDITAVEIS    */
 /* ----------------------------------------- */
@@ -72,3 +76,68 @@
     color: #2746d0;
     font-size: 14px;
 }
+
+
+
+
+/* ---------------------------------------------------------------- */
+/* Editor */
+/* ---------------------------------------------------------------- */
+::selection { background: yellow;} /* Safari */
+::-moz-selection { background: yellow; }/* Firefox */
+
+.share-highlight-btn {
+    width: 185px;
+    top: 25px;
+    left: -30px;
+    position: absolute;
+    background: #313a41;
+}
+
+.holder {
+    display: none;
+    position: absolute;
+}
+
+.btn-caret {
+    width: 14px;
+    height: 7px;
+    position: absolute;
+    top: -6px;
+    left: 14px;
+    background: url(../images/icons/seta_tootip.png)  no-repeat 0px 0px;
+}
+
+.btn-left, .btn-right {
+  display: inline-block;
+  vertical-align: middle;
+  float: left;
+}
+
+/* ---------------------------------------------------------------- */
+/* Icones do editor */
+/* https://www.iconfinder.com/iconsets/typicons-2 */
+/* ---------------------------------------------------------------- */
+
+.icon-editor{
+    width: 20px;
+    height: 20px;
+    vertical-align: sub;
+    text-align: center;
+    color: #fff;
+    background: #353535;
+    cursor: pointer;
+}
+
+.icon{
+    display: inline-block;
+    padding: 15px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.icon-link{ background-image: url(../images/icon-editor/link.png) }
+.icon-unlink{ background-image: url(../images/icon-editor/unlink.png) }
+.icon-delete{ background-image: url(../images/icon-editor/delete.png) }
+.icon-bold{ background-image: url(../images/icon-editor/bold.png) }
+.icon-italic{ background-image: url(../images/icon-editor/italic.png) }

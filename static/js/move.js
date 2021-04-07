@@ -18,6 +18,7 @@ function moveTd(positionToMove){
 	}
 
 	setHistory()
+	initTextEditor()
 }
 
 /* ------------------------------------------------------------ */
@@ -41,6 +42,7 @@ function moveTr(positionToMove){
 	}
 
 	setHistory()
+	initTextEditor()
 }
 
 /* ------------------------------------------------------------ */
@@ -63,5 +65,6 @@ function moveTable(positionToMove){
 	}
 
 	setHistory()
+	initTextEditor()
 
 }

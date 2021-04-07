@@ -21,6 +21,7 @@ function addHTML(e){
 	$('#form-add-html')[0].reset();
 
 	setHistory()
+	initTextEditor()
 }
 
 // ------------------------------------------------------------------------
@@ -39,7 +40,7 @@ function createP(e){
 		attr +=  ' style="' + removeLineBreakToStyle(style) + '" '
 	}
 
-	var html = '<p '+ attr +'>'+ content +'</p>';
+	var html = '<p '+ attr +' contenteditable="true">'+ content +'</p>';
 
 	$('.is-selected').append(html);
 
@@ -48,6 +49,7 @@ function createP(e){
 	$('#form-add-p')[0].reset();
 
 	setHistory()
+	initTextEditor()
 }
 
 // ------------------------------------------------------------------------
@@ -103,6 +105,7 @@ function createImg(e){
 	$('#form-add-img')[0].reset();
 
 	setHistory()
+	initTextEditor()
 }
 
 
@@ -120,11 +123,8 @@ function createTable(e){
 	var bgcolor = form.find('[name=bgcolor]').val()
 
 	if( ! width){
-		console.log('asdaaaaaaaaaaaaaaaaa')
 		width = $('.is-selected').attr('width');
 	}
-
-
 
 	var widthTd = Math.round( width/tds );
 
@@ -161,6 +161,7 @@ function createTable(e){
 	$('#form-add-table')[0].reset();
 
 	setHistory()
+	initTextEditor()
 }
 
 
@@ -187,6 +188,7 @@ function createTd(positionToInsert){
 	}
 
 	setHistory()
+	initTextEditor()
 }
 
 // ------------------------------------------------------------------------
@@ -221,4 +223,5 @@ function createTr(positionToInsert){
 	}
 
 	setHistory()
+	initTextEditor()
 }

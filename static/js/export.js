@@ -40,7 +40,10 @@ function exportFile(e){
 
 		$('body > table *').removeAttr('class');
 		var htmlNewsEdited = $('body > table').outerHTML();
-		
+		var htmlNewsEdited = htmlNewsEdited.replace('contenteditable="true"', "");
+
+		console.log(htmlNewsEdited)
+
 		// coloca o html editado no body modelo
 		var text = html.replace("HTML_TABLE", htmlNewsEdited);
 			text = text.replace("HTML_HEAD", $('[name=head-export]').val() );
