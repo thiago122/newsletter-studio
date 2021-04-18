@@ -48,10 +48,16 @@ function unSelect(){
 	$('*').removeClass('is-selected');
 }
 
-function selectElementToEdit(e){
+function selectElementToEdit(e, element){
 	e.stopPropagation()
 	$('*').removeClass('is-selected');
-	$(this).addClass('is-selected');
+
+	if(typeof(element) == 'undefined'){
+		$(this).addClass('is-selected');
+	}else{
+		element.addClass('is-selected');
+	}
+
 	showPanel();
 	edit();
 	

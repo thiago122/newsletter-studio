@@ -31,6 +31,39 @@
 		</div>
 	</span>
 
+
+	<!-- Menu de contexto -->
+	<div class="context-menu">
+		<ul class="context-menu__list">
+			
+			<li class="context-menu__itens"><a class="content-menu__link" href="#!" data-toggle="modal" data-target="#modal-table"> Tabela </a></li>			
+			<li class="context-menu__itens"><a class="content-menu__link" href="#!" data-toggle="modal" data-target="#modal-p"> Parágrafo</a></li>			
+			<li class="context-menu__itens"><a class="content-menu__link" href="#!" data-toggle="modal" data-target="#modal-img"> Imagem </a></li>
+
+			<li class="content-menu__separator"></li>
+
+			<li class="context-menu__itens"><a class="content-menu__link" href="#!" onclick="createTdBefore()">Célula antes</a></li>			
+			<li class="context-menu__itens"><a class="content-menu__link" href="#!" onclick="createTdAfter()">Célula depois</a></li>			
+			<li class="context-menu__itens"><a class="content-menu__link" href="#!" onclick="createTrBefore()">Linha antes </a></li>			
+			<li class="context-menu__itens"><a class="content-menu__link" href="#!" onclick="createTrAfter()">Linha Depois</a></li>			
+			<li class="context-menu__itens"><a class="content-menu__link" href="#!" data-toggle="modal" data-target="#modal-html">HTML</a></li>
+
+			<li class="content-menu__separator"></li>
+
+			<li class="context-menu__itens"><a href="#!" class="content-menu__link" onclick="duplicateTdBefore()"> copiar Célula antes</a></li>
+			<li class="context-menu__itens"><a href="#!" class="content-menu__link" onclick="duplicateTdAfter()"> copiar Célula depois</a></li>
+			<li class="context-menu__itens"><a href="#!" class="content-menu__link" onclick="duplicateTrBefore()"> copiar Linha antes</a></li>
+			<li class="context-menu__itens"><a href="#!" class="content-menu__link" onclick="duplicateTrAfter()"> copiar Linha Depois</a></li>
+
+			<li class="content-menu__separator"></li>
+
+			<li class="context-menu__itens"><a class="content-menu__link" href="#!" onclick="deleteTd()" > remover Célula </a></li>
+			<li class="context-menu__itens"><a class="content-menu__link" href="#!" onclick="deleteTr()"> remover Linha</a></li>
+			<li class="context-menu__itens"><a class="content-menu__link" href="#!" onclick="deleteTable()"> remover Tabela</a></li>
+
+		</ul>
+	</div>
+
 	<div class="panel is-dragabble">
 
 		<div class="panel__header is-dragabble__handler">
@@ -141,8 +174,6 @@
 				<span class="btn is-small" onclick="snippetAtrubutosP( '#form-edit-p', 'gp-regular' )"> GP Regular </span>	
 				<span class="btn is-small" onclick="snippetAtrubutosP( '#form-edit-p', 'espacamento' )"> Espaçamento </span>	
 				<span class="btn is-small" onclick="snippetAtrubutosP( '#form-edit-p', 'padrao' )"> Sistema </span>	
-
-
 
 				<button type="submit" class="btn">Salvar</button>
 
@@ -531,6 +562,7 @@ border: 0;
     <script src="static/js/import.js"></script>
     <script src="static/js/drag-panel.js"></script>
     <script src="static/js/snippets.js"></script>
+    <script src="static/js/context-menu.js"></script>
     <script src="static/js/text-editor.js"></script>
 
     <script>
